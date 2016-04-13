@@ -1,19 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.bhkfghhdf.learnswedishquickneasy.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    android:weightSum="1">
+
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Welcome"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:textSize="40dp"
+        android:layout_margin="16dp"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:text="Nya Ord"
+                android:id="@+id/button"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:padding="16dp"
+                android:onClick="NyaOrdVyn" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:text="Grammatik"
+                android:id="@+id/button2"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:padding="16dp" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:text="Bild &amp; Ljud"
+                android:id="@+id/button3"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:padding="16dp"
+                android:onClick="ImageAndSound" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:text="Settings"
+                android:id="@+id/button4"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:padding="16dp"
+                android:onClick="SettingsView" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:text="About Us"
+                android:id="@+id/button5"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:padding="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
