@@ -4,7 +4,7 @@ import android.content.Context;
 
 
 public class WordsAndPhrases {
-
+//grym
     // Instansvariabler
     Context context;
 

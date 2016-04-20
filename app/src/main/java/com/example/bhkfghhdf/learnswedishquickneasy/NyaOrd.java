@@ -27,6 +27,26 @@ public class NyaOrd extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nya_ord);
 
+        Button playSwe = (Button)findViewById(R.id.button_play_swe);
+        Button playEng = (Button)findViewById(R.id.button_play_Eng);
+
+        final MediaPlayer mpSvenska = MediaPlayer.create(NyaOrd.this,R.raw.svenskaord);
+        final MediaPlayer mpEngelska = MediaPlayer.create(NyaOrd.this,R.raw.englishword);
+
+        playSwe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mpSvenska.start();
+            }
+        });
+
+        playEng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mpEngelska.start();
+            }
+        });
+
     }
 
     // Instansmetoder

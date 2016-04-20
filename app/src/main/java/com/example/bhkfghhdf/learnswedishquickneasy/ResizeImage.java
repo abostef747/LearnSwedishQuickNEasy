@@ -1,16 +1,15 @@
 package com.example.bhkfghhdf.learnswedishquickneasy;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
 /**
- * Created by bhkfghhdf on 2016-04-14.
+ * Created by bhkfghhdf on 2016-04-19.
  */
-public class PictureUtils{
-//bimap
+public class ResizeImage {
+
     // Räknar ut många gånger bilden ska halveras för att nå önskad storlek
     // Önskad storlek anges som reqWidth och reqHeight
     // Bildens originalstorlek finns i options (BitmapFactory.options)
@@ -38,13 +37,13 @@ public class PictureUtils{
     }
 
     /*
-         Metod som förminskar en bild givet ett visst ID och returnerar den nya bilden
-         som en Bitmap
-         res är t.ex. getResources()
-         resId är t.ex. R.drawable.my_image
-         reqWidth är önskad bredd
-         reqHeight är önskad höjd
-      */
+            Metod som förminskar en bild givet ett visst ID och returnerar den nya bilden
+            som en Bitmap
+            res är t.ex. getResources()
+            resId är t.ex. R.drawable.my_image
+            reqWidth är önskad bredd
+            reqHeight är önskad höjd
+         */
     public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
                                                          int reqWidth, int reqHeight) {
 
@@ -52,6 +51,7 @@ public class PictureUtils{
         final BitmapFactory.Options options = new BitmapFactory.Options();
         // Undvik att läsa in hela bilden i minnet
         options.inJustDecodeBounds = true;
+
         // Den här metoden ändrar på options så att options nu har värden på
         // options.outHeight och options.outWidth
         BitmapFactory.decodeResource(res, resId, options);
@@ -71,6 +71,5 @@ public class PictureUtils{
 
         return decodeSampledBitmapFromResource(context.getResources(), resId, reqWidth, reqHeight);
     }
-
 }
 

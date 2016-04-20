@@ -25,4 +25,5 @@ public class MyRandom {
 
         return result;
     }
+    //ok
 }
