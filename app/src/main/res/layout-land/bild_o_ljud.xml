@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 <LinearLayout
@@ -17,93 +17,110 @@
         android:id="@+id/textView3"
         android:layout_gravity="center_horizontal" />
 
-    <LinearLayout
-        android:orientation="horizontal"
+</LinearLayout>
+
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="0dp"
+            android:layout_height="118dp"
             android:src="@drawable/car"
             android:scaleType="fitXY"
-            android:layout_margin="16dp"
-            android:id="@+id/car" />
+            android:id="@+id/car"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp" />
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/cykel"
+            android:layout_width="0dp"
+            android:layout_height="118dp"
+            android:src="@drawable/bicycle"
             android:scaleType="fitXY"
-            android:layout_margin="16dp"
-            android:id="@+id/cykel" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+            android:id="@+id/cykel"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp" />
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="0dp"
+            android:layout_height="118dp"
+            android:src="@drawable/sweets"
+            android:scaleType="fitXY"
+            android:id="@+id/godis"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="118dp"
             android:src="@drawable/house"
             android:scaleType="fitXY"
-            android:layout_margin="16dp"
-            android:id="@+id/house" />
+            android:id="@+id/house"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp" />
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="0dp"
+            android:layout_height="118dp"
             android:src="@drawable/tree"
             android:scaleType="fitXY"
-            android:layout_margin="16dp"
-            android:id="@+id/tree" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+            android:id="@+id/tree"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp" />
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="0dp"
+            android:layout_height="118dp"
+            android:src="@drawable/paper"
+            android:scaleType="fitXY"
+            android:id="@+id/papper"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="118dp"
             android:src="@drawable/man"
             android:scaleType="fitXY"
-            android:layout_margin="16dp"
-            android:id="@+id/man" />
+            android:id="@+id/man"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp" />
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/kvinna"
+            android:layout_width="0dp"
+            android:layout_height="118dp"
+            android:src="@drawable/pencil"
             android:scaleType="fitXY"
-            android:layout_margin="16dp"
-            android:id="@+id/kvinna" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+            android:id="@+id/penna"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp" />
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/papper"
+            android:layout_width="0dp"
+            android:layout_height="118dp"
+            android:src="@drawable/woman"
             android:scaleType="fitXY"
-            android:layout_margin="16dp"
-            android:id="@+id/papper" />
+            android:id="@+id/kvinna"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp" />
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/penna"
-            android:scaleType="fitXY"
-            android:layout_margin="16dp"
-            android:id="@+id/penna" />
-    </LinearLayout>
-
+    </GridLayout>
 </LinearLayout>
-</ScrollView>

@@ -8,12 +8,11 @@
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="2"
         android:id="@+id/card_1"
         android:background="@drawable/my_custom_background"
         android:layout_margin="16dp"
-        android:padding="8dp"
-        android:layout_weight="2"
-        android:gravity="center_vertical">
+        android:padding="8dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -24,49 +23,30 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Det Svenska Ordet"
             android:id="@+id/actual_swedish_word"
-            android:layout_weight="1"
             android:layout_gravity="center_horizontal"
-            android:gravity="center_vertical" />
+            android:layout_marginTop="16dp" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:text="Det här är det svenska ordet och den kommer översättas till engelska"
             android:id="@+id/actual_swedish_description"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="8dp"
-            android:gravity="center_horizontal"
-            android:layout_weight="1" />
+            android:gravity="center_horizontal" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:padding="8dp"
-            android:layout_weight="1">
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="Spela ord"
-                android:id="@+id/button_play_swe"
-                android:layout_weight="1" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="Spela mening"
-                android:id="@+id/button_pause"
-                android:layout_weight="1" />
-
-
-        </LinearLayout>
+        <ImageButton
+            android:id="@+id/button_play_swe"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_record_voice_over_black_24dp"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
 
     </LinearLayout>
 
@@ -74,11 +54,11 @@
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="2"
         android:id="@+id/card_2"
         android:background="@drawable/my_custom_background"
         android:layout_margin="16dp"
-        android:padding="8dp"
-        android:layout_weight="2">
+        android:padding="8dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -89,65 +69,42 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="The English Word"
             android:id="@+id/actual_english_word"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
-            android:gravity="center_vertical" />
+            android:layout_marginTop="16dp" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:text="this is the english word and it has been translated from swedish"
             android:id="@+id/actual_english_description"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="8dp"
-            android:gravity="center_horizontal"
-            android:layout_weight="1" />
+            android:gravity="center_horizontal" />
+        <ImageButton
+            android:id="@+id/button_play_Eng"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_record_voice_over_black_24dp"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:padding="8dp"
-            android:layout_weight="1">
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="Play word"
-                android:id="@+id/button_play_Eng"
-                android:layout_weight="1" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="Play Phrase"
-                android:id="@+id/button7"
-                android:layout_weight="1" />
-
-        </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
+
+    <Button
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="Next Word"
-            android:onClick="changeTranslation"
-            android:id="@+id/random_word"
-            android:layout_weight="1"
-            android:layout_margin="16dp" />
-    </LinearLayout>
+        android:text="Next Word"
+        android:onClick="changeTranslation"
+        android:id="@+id/random_word"
+        android:layout_weight="0.75"
+        android:layout_margin="8dp" />
 
 
 </LinearLayout>
